@@ -2,7 +2,7 @@
 // Node 18+ environment assumed (Netlify supports fetch in Node 18)
 const SENDGRID_API = process.env.SENDGRID_API_KEY;
 const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL; // where to send notifications
-const FROM_EMAIL = process.env.FROM_EMAIL || 'no-reply@yourdomain.com';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'ashishofficial199@gmail.com';
 
 exports.handler = async function(event) {
   try {
