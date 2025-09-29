@@ -28,12 +28,15 @@
 })();
 
 // Simple contact form handling - demo only
+// script.js — AJAX submit + call Netlify function to send email via SendGrid
+
 (function() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     const nameEl = document.getElementById('name');
     const emailEl = document.getElementById('email');
     const messageEl = document.getElementById('message');
@@ -48,10 +51,49 @@
       return;
     }
 
-    alert('Thanks ' + name + '! Your message has been received. (Demo only)');
-    form.reset();
+    // 1) Submit to Netlify Forms (FormData to /) so Netlify stores the submission
+    const formData = new FormData(form);
+
+    try {
+      const netlifyResp = await fetch('/', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!netlifyResp.ok) {
+        // still continue to try sending email, but show console warning:
+        console.warn('Netlify form POST responded with status', netlifyResp.status);
+      }
+    } catch (err) {
+      console.warn('Netlify form POST failed:', err);
+    }
+
+    // 2) Call the Netlify Function to send an email (POST JSON)
+    try {
+      const fnResp = await fetch('/.netlify/functions/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      if (!fnResp.ok) {
+        const text = await fnResp.text();
+        console.error('sendEmail function error:', fnResp.status, text);
+        alert('Sorry — message storage succeeded but email notification failed. Check logs.');
+        return;
+      }
+
+      alert('Thanks! Your message has been sent.');
+      form.reset();
+    } catch (err) {
+      console.error('Error calling sendEmail function:', err);
+      alert('Sorry — there was an error sending your message. Please try again.');
+    }
   });
 })();
+
 
 // --- Simple test runner (runs automatically unless ?test=false in URL) ---
 (function runTests() {
