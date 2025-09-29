@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vorteile Healthcare — Demo</title>
+  <meta name="description" content="Vorteile Healthcare — demo site" />
+
+  <!-- Favicon: drop your logo file as logo.png next to these files -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo"><img src="logo.png" alt="Vorteile logo" class="logo-img"/></div>
+        <div>
+          <div class="brand-title">Vorteile Healthcare</div>
+          <div class="brand-sub">Innovating Health Solutions</div>
+        </div>
+      </div>
+
+      <nav class="desktop">
+        <a href="#services">Services</a>
+        <a href="#research">Research</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+        <button class="btn">Get in touch</button>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true" data-open="false">
+      <div class="container mobile-items">
+        <a href="#services">Services</a>
+        <a href="#research">Research</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1 class="h-title">Transforming Healthcare with Innovation</h1>
+        <p class="lead">Vorteile Healthcare brings cutting-edge medical solutions with a focus on accessibility, efficiency, and innovation for a healthier future.</p>
+
+        <div class="cta">
+          <a href="#contact" class="btn">Contact us</a>
+          <a href="#services" class="outline">Our services</a>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat"><strong>10+</strong><span>Years of Experience</span></div>
+          <div class="stat"><strong>200+</strong><span>Successful Projects</span></div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1580281657529-47dcbef9c4f1?q=80&w=1200&auto=format&fit=crop" alt="healthcare" />
+
+        <div class="feature-card">
+          <small>Featured Service</small>
+          <div class="feature-title">Digital Health Platforms</div>
+          <div class="feature-desc">Empowering patients and doctors through technology-driven healthcare solutions.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="center">
+        <h2>Our Capabilities</h2>
+        <p class="sub">Focused services across discovery, development and manufacturing to help biotech and pharma teams achieve milestones faster.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-row">
+            <div class="pill red">DD</div>
+            <div>
+              <h3>Drug Discovery</h3>
+              <p>Target identification, lead optimization and preclinical evaluation using advanced bioinformatics.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-row">
+            <div class="pill blue">CR</div>
+            <div>
+              <h3>Clinical Research</h3>
+              <p>Protocol design, trial management and regulatory support for early to late phase studies.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-row">
+            <div class="pill cyan">BM</div>
+            <div>
+              <h3>Biotech Manufacturing</h3>
+              <p>GMP-compliant production support, scale-up and process development services.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <div class="case-grid">
+        <div>
+          <h2>Selected Case Studies</h2>
+          <p class="sub">Outcomes-driven projects where our multidisciplinary teams translated complex biology into clinical programs.</p>
+
+          <ul class="list-cases">
+            <li class="card small">
+              <div class="case-row">
+                <div class="case-pill green">Lab</div>
+                <div>
+                  <div class="case-title">AI-guided biomarker discovery</div>
+                  <div class="case-desc">Identified predictive markers that improved patient selection and increased response rates in Phase II study.</div>
+                </div>
+              </div>
+            </li>
+
+            <li class="card small">
+              <div class="case-row">
+                <div class="case-pill blue-light">Scale</div>
+                <div>
+                  <div class="case-title">GMP process scale-up</div>
+                  <div class="case-desc">Supported a biologics startup to move from bench to pilot manufacturing with regulatory-ready documentation.</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="image-wrap">
+            <img src="https://images.unsplash.com/photo-1581093588401-6f4c6a3f8b4a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="research" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team">
+      <div class="center">
+        <h2>Leadership & Experts</h2>
+        <p class="sub">Experienced leadership across biology, clinical operations and regulatory affairs.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="card team">
+          <div class="avatar">DM</div>
+          <div class="team-name">Dr. Meera Kapoor</div>
+          <div class="team-role">Chief Scientific Officer</div>
+        </div>
+
+        <div class="card team">
+          <div class="avatar">AR</div>
+          <div class="team-name">Amit Roy</div>
+          <div class="team-role">Head of R&D</div>
+        </div>
+
+        <div class="card team">
+          <div class="avatar">SM</div>
+          <div class="team-name">Sara Mehta</div>
+          <div class="team-role">Quality & Regulatory</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-wrap">
+        <div>
+          <h3>Get in touch</h3>
+          <p class="sub">Tell us about your project and we'll set up a call to explore a fit.</p>
+
+          <div class="contact-info">
+            <div><strong>Email:</strong> hello@vorteile.example</div>
+            <div><strong>Phone:</strong> +91 98765 43210</div>
+            <div><strong>Address:</strong> 123 BioPark, Bengaluru, India</div>
+          </div>
+
+          <div style="margin-top:12px"><a href="#" class="link-blue">Careers →</a></div>
+        </div>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn">Send message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="brand">
+        <div class="logo"><img src="logo.png" alt="Vorteile logo" class="logo-img"/></div>
+        <div>
+          <div class="brand-title">Vorteile Healthcare</div>
+          <div class="brand-sub" id="yearWrap">© <span id="year"></span> All rights reserved</div>
+        </div>
+      </div>
+
+      <div class="footer-links">Terms · Privacy · Site map</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
