@@ -9,14 +9,83 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, A
 header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-bottom:1px solid #eef2f6;z-index:60}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(90deg,#dc2626,#2563eb);display:flex;align-items:center;justify-content:center;color:white;font-weight:800}
-.logo-img{width:30px;height:30px;object-fit:contain}
+/* .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(90deg,#dc2626,#2563eb);display:flex;align-items:center;justify-content:center;color:white;font-weight:800} */
+.logo-img{width:100px;height:90px;object-fit:contain}
 .brand-title{font-weight:800}
 .brand-sub{font-size:12px;color:#6b7280}
 nav.desktop{display:flex;gap:18px;align-items:center}
 nav.desktop a{color:#334155;text-decoration:none;font-weight:500}
 .btn{background:#dc2626;color:white;padding:9px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
 .mobile-toggle{display:none;background:transparent;border:0}
+
+
+/* Welcome Section Styling */
+.welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f5ef;
+  padding: 60px 10%;
+  min-height: 90vh;
+  flex-wrap: wrap;
+}
+
+.welcome-content {
+  max-width: 600px;
+}
+
+.welcome-content h2 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.welcome-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.welcome-content .blue {
+  color: #3185fc;
+}
+
+.welcome-content .black {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.welcome-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: #222;
+  line-height: 1.6;
+}
+
+.welcome-content .red {
+  color: #ff2e2e;
+  font-weight: 600;
+}
+
+.welcome-image img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .welcome-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .welcome-image img {
+    margin-top: 30px;
+  }
+}
 
 /* Hero */
 .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:48px 0}
@@ -63,6 +132,71 @@ h2{font-size:24px;margin:0 0 8px 0}
 .team{padding:18px;text-align:center}
 .team-name{margin-top:12px;font-weight:700}
 .team-role{color:#6b7280}
+
+
+
+/* Highlights Section */
+/* Section wrapper */
+#contact {
+  background: #009fe3;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Section intro text */
+#contact p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Grid container for cards */
+.contact-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each feature card */
+.contact-card {
+  background: #033f8a;
+  border-radius: 10px;
+  padding: 25px 20px;
+  text-align: center;
+  color: white;
+  border: 1px solid #4aa3ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Card icons and titles */
+.contact-card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: #d6eaff;
+  line-height: 1.6;
+}
+
+
 
 /* Contact */
 .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;background:white;padding:20px;border-radius:16px;box-shadow:0 10px 30px rgba(2,6,23,.04)}
